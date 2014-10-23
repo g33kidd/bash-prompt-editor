@@ -1,0 +1,33 @@
+<head>
+    <title>Something Awesome</title>
+</head>
+
+<body>
+    {{> terminal}}
+</body>
+
+<template name="terminal">
+    
+    <form id="terminalProps">
+        <input type="text" id="username" value="{{username}}">
+        <input type="text" id="sysname" value="{{sysname}}">
+        <input type="text" id="dir" value="{{dir}}">
+    </form>
+
+    <div class="terminal-window">
+      <div class="navbar">
+        <div class="action close"><div class="circle"></div></div>
+        <div class="action min"><div class="circle"></div></div>
+        <div class="action full"><div class="circle"></div></div>
+      </div>
+      <div class="terminal">
+        <p class="login">Last login: Thu Oct 23 11:31:12 on ttys000</p>
+        <p class="user">
+          <span class="username">{{username}}</span> <span>at</span> <span class="sys">{{sysname}}</span> <span>in</span> <span class="dir">{{dir}}</span>
+        </p>
+        <p class="newline">
+        </p>
+      </div>
+    </div>
+
+</template>
